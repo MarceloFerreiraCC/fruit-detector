@@ -16,11 +16,24 @@ const traducoes = {
 
 //Inicialização da câmera
 async function setupCamera() {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+
+    const constraints = {
+        audio: false,
+        video: {
+            facingMode: {
+                ideal: "environment"
+            }
+        }
+    };
+
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+
     video.srcObject = stream;
 
     return new Promise(resolve => {
-        video.onloadedmetadata = () => resolve(video);
+        video.onloadedmetadata = () => {
+            resolve(video);
+        };
     });
 }
 

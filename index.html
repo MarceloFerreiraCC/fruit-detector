@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FruitVision</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -9,15 +10,15 @@
 
   <h1>🍎 FruitVision</h1>
 
-<div id="camera-box">
-  <video id="camera" autoplay playsinline></video>
-  <canvas id="canvas"></canvas>
-</div>
+  <div id="camera-box">
+      <video id="camera" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+  </div>
 
-<div id="painel">
-  <h2>Resultados</h2>
-  <div id="resultado"></div>
-</div>
+  <div id="painel">
+      <h2>Resultados</h2>
+      <div id="resultado"></div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
