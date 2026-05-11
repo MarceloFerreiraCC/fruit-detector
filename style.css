@@ -1,0 +1,28 @@
+#camera-box {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: black;
+}
+
+/* vídeo e canvas ocupam exatamente o mesmo espaço */
+#camera, #canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* espelhamento opcional (efeito selfie) */
+#camera {
+  transform: scaleX(-1);
+}
+
+/* acompanhar o espelhamento no canvas */
+#canvas {
+  transform: scaleX(-1);
+}
